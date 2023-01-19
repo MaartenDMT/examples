@@ -2,7 +2,7 @@ from ttkbootstrap import Button, Frame, Label
 
 
 class MixTab(Frame):
-    def __init__(self, parent, presenter):
+    def __init__(self, parent, presenter) -> None:
         super().__init__()
         self._parent = parent
         self._presenter = presenter

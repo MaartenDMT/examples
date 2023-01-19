@@ -17,12 +17,12 @@ path_podcast = os.path.normpath("audio/podcast/nigero_podcast.mp3")
 print(os.path.abspath(path_mixed))
 
 class Effect:
-    def __init__(self):
+    def __init__(self)-> None:
         self.chunk_size = 500_000
         self.file_path = ""
         self.samplerate = ""
     
-    def delay(self):
+    def delay(self)-> None:
         self.check_path(self.file_path)
         with AudioFile(self.file_path) as f:
             self.samplerate = f.samplerate
@@ -42,7 +42,7 @@ class Effect:
                     delay_audio = mono
                     o.write(delay_audio)
     
-    def distortion(self):
+    def distortion(self)-> None:
         self.check_path(self.file_path)
         with AudioFile(self.file_path) as f:
             self.check_path(path_distortion)
@@ -55,7 +55,7 @@ class Effect:
                     distorted_audio = mono
                     o.write(distorted_audio)
                     
-    def reverb(self):
+    def reverb(self)-> None:
         self.check_path(self.file_path)
         with AudioFile(self.file_path) as f:
             self.samplerate = f.samplerate
@@ -68,7 +68,7 @@ class Effect:
                     
                     o.write(effected)
     
-    def mix(self):
+    def mix(self)-> None:
         self.check_path(self.file_path)
         with AudioFile(self.file_path) as f:
             self.samplerate = f.samplerate
@@ -85,7 +85,7 @@ class Effect:
                     
                     o.write(effected)
     
-    def podcast(self):
+    def podcast(self)-> None:
         self.check_path(self.file_path)
         with AudioFile(self.file_path) as f:
             self.samplerate = f.samplerate
@@ -104,7 +104,7 @@ class Effect:
                     o.write(effected)
     
     @staticmethod
-    def check_path(file_path):
+    def check_path(file_path)-> None:
         if not os.path.exists(file_path):
             print(f"Error: {file_path} does not exist.")
             return

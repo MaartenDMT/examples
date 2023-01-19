@@ -22,7 +22,7 @@ class Presenter:
     def select_file(self) -> None:
         effects = self.get_effects()
         effects.file_path = filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = (("audio files", "*.mp3"), ("all files", "*.*")))
-        print(effects.file_path)
+
     
     
     #Delay_tab 

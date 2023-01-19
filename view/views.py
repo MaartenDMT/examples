@@ -8,7 +8,7 @@ from view.reverbtab import ReverbTab
 
 
 class App(Window):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.title("Audio Effects")
         self.geometry("600x400")
@@ -27,7 +27,7 @@ class App(Window):
             self.theme_menu.add_command(
                 label=theme, command=lambda theme=theme: self.changer(theme))
     
-    def create_widgets(self, presenter):
+    def create_widgets(self, presenter) -> None:
         self._presenter = presenter
         
         Label(self, text="Welcome, to the Audio Effect App!").grid(row=0, column=0, padx=5, pady=5)

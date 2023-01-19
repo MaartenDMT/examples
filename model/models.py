@@ -16,7 +16,7 @@ class Models:
         self.podcast_model = PodcastModel(self._presenter)
         
 class App:
-    def __init__(self, presenter):
+    def __init__(self, presenter)-> None:
         self._presenter = presenter
             
 
