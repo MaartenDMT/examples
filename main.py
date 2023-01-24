@@ -7,3 +7,5 @@ if __name__ == "__main__":
     view = App()
     app = Presenter(model, view)
     app.run()
+    
+    #TODO: add some components for the tabs paramaters you can set
