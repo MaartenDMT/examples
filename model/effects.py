@@ -1,7 +1,8 @@
 import os
 
 import numpy as np
-from pedalboard import *
+from pedalboard.pedalboard import Pedalboard
+from pedalboard import Reverb, Distortion, Delay, NoiseGate, Compressor, LowShelfFilter, Gain
 from pedalboard.io import AudioFile
 
 # file_path = '/'
